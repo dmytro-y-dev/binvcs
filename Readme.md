@@ -2,7 +2,9 @@ binvcs
 ------------------------------------------------------
 ###### Simple Version Control System for binary files.
 
-This VCS doesn't provide teamwork capabilities like commit to server, fetch from server, merge, locking, etc. It can be used in simple projects in which you need to control versions of assets.
+This VCS doesn't provide teamwork capabilities like commit to server, fetch from
+server, merge, locking, etc. It is intended to be used locally for simple projects
+in which you need to control versions of assets.
 
 ##### Usage
 
@@ -19,11 +21,11 @@ This VCS doesn't provide teamwork capabilities like commit to server, fetch from
 `binvcs help`                                      - show brief help on commands.
 `binvcs show checkpoints`                          - display all available checkpoints.
 `binvcs rollback <commit-id>`                      - rollback changes to the state of project at time of commit. Commit must have a checkpoint to enable rollback.
-`binvcs rmcheckpoint <commit-id>`                  - make commit unrollable (if you need to free space from old checkpoints).
+`binvcs uncheckpoint <commit-id>`                  - make commit unrollable (if you need to free space from old checkpoints).
 `binvcs checkpoint <commentary>`                   - shortcut for `binvcs commit --checkpoint <commentary>`.
 `binvcs recommit [--checkpoint] <commentary>`      - revert last commit and commit changes once again. It works only if there were no changes on filesystem.
 ```
 
 ##### Release history
 
-Not released yet
+No release yet

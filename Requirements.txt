@@ -13,7 +13,7 @@
     j. `binvcs help`                                      - show brief help on commands.
     k. `binvcs show checkpoints`                          - display all available checkpoints.
     l. `binvcs rollback <commit-id>`                      - rollback changes to the state of project at time of commit. Commit must have a checkpoint to enable rollback.
-    m. `binvcs rmcheckpoint <commit-id>`                  - make commit unrollable (if you need to free space from old checkpoints).
+    m. `binvcs uncheckpoint <commit-id>`                  - make commit unrollable (if you need to free space from old checkpoints).
     n. `binvcs checkpoint <commentary>`                   - shortcut for `binvcs commit --checkpoint <commentary>`.
     o. `binvcs recommit [--checkpoint] <commentary>`      - revert last commit and commit changes once again. It works only if there were no changes on filesystem.
 4. Repository contains branches.
