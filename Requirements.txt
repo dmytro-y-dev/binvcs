@@ -1,0 +1,28 @@
+1. `binvcs` is VCS for binary files.
+2. `binvcs` provides command line interface.
+3. List of supported functions:
+    a. `binvcs init`                                      - create new repository.
+    b. `binvcs add <list-of-files-and-directories>`       - add files and directories to stage.
+    c. `binvcs rm <list-of-files-and-directories>`        - remove files and directories from head and stage.
+    d. `binvcs commit [--checkpoint] <commentary>`        - commit files to head. If `checkpoint` flag is set then create a checkpoint for future rollback.
+    e. `binvcs diff <first-commit-id> <second-commit-id>` - display differences between commits.
+    f. `binvcs status`                                    - display current stage status.
+    g. `binvcs show branches`                             - display all available branches of repository.
+    h. `binvcs branch <branch-id>`                        - switch to other branch or create new branch.
+    i. `binvcs unstage`                                   - clear stage.
+    j. `binvcs help`                                      - show brief help on commands.
+    k. `binvcs show checkpoints`                          - display all available checkpoints.
+    l. `binvcs rollback <commit-id>`                      - rollback changes to the state of project at time of commit. Commit must have a checkpoint to enable rollback.
+    m. `binvcs rmcheckpoint <commit-id>`                  - make commit unrollable (if you need to free space from old checkpoints).
+    n. `binvcs checkpoint <commentary>`                   - shortcut for `binvcs commit --checkpoint <commentary>`.
+    o. `binvcs recommit [--checkpoint] <commentary>`      - revert last commit and commit changes once again. It works only if there were no changes on filesystem.
+4. Repository contains branches.
+5. Branches have name and contain commits.
+6. Commit is a record which contains id, creation date, author and list of stored files and directories.
+7. Checkpoints are commits with enabled rollback functionality.
+8. `binvcs` must keep user settings.
+9. Author name is specified in user settings.
+10. `binvcs` mustn't make deltas of any files. It must save binary file wholly at the checkpoint.
+11. Last commit on branch must always be a checkpoint.
+12. Keyword `HEAD` can be specified instead of <commit-id>. In this case `binvcs` substitutes id of the last commit on current branch.
+13. [Optional] Stored files must be compressed. Compression technique can be specified in user settings.
