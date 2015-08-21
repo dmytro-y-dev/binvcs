@@ -3,7 +3,7 @@
 3. List of supported functions:
     a. `binvcs init`                                      - create new repository.
     b. `binvcs add <list-of-files-and-directories>`       - add files and directories to stage.
-    c. `binvcs rm <list-of-files-and-directories>`        - remove files and directories from head and stage.
+    c. `binvcs rm <list-of-files-and-directories>`        - remove files and directories from HEAD and stage.
     d. `binvcs commit [--checkpoint] <commentary>`        - commit files to head. If `checkpoint` flag is set then create a checkpoint for future rollback.
     e. `binvcs diff <first-commit-id> <second-commit-id>` - display differences between commits.
     f. `binvcs status`                                    - display current stage status.
@@ -13,9 +13,11 @@
     j. `binvcs help`                                      - show brief help on commands.
     k. `binvcs checkpoints`                               - display all available checkpoints.
     l. `binvcs rollback <commit-id>`                      - rollback changes to the state of project at time of commit. Commit must have a checkpoint to enable rollback.
-    m. `binvcs uncheckpoint <commit-id>`                  - make commit unrollable (if you need to free space from old checkpoints).
+    m. `binvcs remove-checkpoint <commit-id>`             - make commit unrollable (if you need to free space from old checkpoints).
     n. `binvcs checkpoint <commentary>`                   - shortcut for `binvcs commit --checkpoint <commentary>`.
     o. `binvcs recommit [--checkpoint] <commentary>`      - revert last commit and commit changes once again. It works only if there were no changes on filesystem.
+    p. `binvcs remove-branch <branch-id>`                 - remove branch from repository (HEAD can't be removed).
+    q. `binvcs rename-branch <old-id> <new-id`>           - change branch id from <old-id> to <new-id>.
 4. Repository contains branches.
 5. Branches have id (string) and contain commits.
 6. Commit is a record which contains id, creation date, commentary, author and list of stored files and directories.
@@ -26,3 +28,4 @@
 11. Last commit on branch must always be a checkpoint.
 12. Keyword `HEAD` can be specified instead of <commit-id>. In this case `binvcs` substitutes id of the last commit on current branch.
 13. [Optional] Stored files must be compressed. Compression technique can be specified in user settings.
+14. Each checkpoint must be stored in separate folders. Each file in checkpoint must be separately available (not packed in archive with other files).
