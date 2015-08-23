@@ -28,4 +28,6 @@
 11. Last commit on branch must always be a checkpoint.
 12. Keyword `HEAD` can be specified instead of <commit-id>. In this case `binvcs` substitutes id of the last commit on current branch.
 13. [Optional] Stored files must be compressed. Compression technique can be specified in user settings.
-14. Each checkpoint must be stored in separate folders. Each file in checkpoint must be separately available (not packed in archive with other files).
+14. Each checkpoint must be stored in separate folders (for default content storage).
+15. Every commit must have unique id in a repository (not just unique id in a branch).
+16. Every branch must have unique id in a repository.
