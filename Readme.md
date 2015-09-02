@@ -2,9 +2,12 @@ binvcs
 ------------------------------------------------------
 ###### Simple Version Control System for binary files.
 
-This VCS doesn't provide teamwork capabilities like commit to server, fetch from
-server, merge, locking, etc. It is intended to be used locally for simple projects
-in which you need to control versions of assets.
+This is centralized VCS to control versions of assets and other binary files on project.
+
+User decides whether should commit have rollback capability or not. If the commit has rollback 
+capability, then it is called checkpoint. The key idea of this VCS is to hold whole copies
+(not just deltas) of files on every checkpoint and give user capability to decide if checkpoint
+should store files or not. It is designed so to keep size of file storage low.
 
 ##### Usage
 
