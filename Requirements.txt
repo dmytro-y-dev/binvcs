@@ -1,4 +1,6 @@
-1. `binvcs` is VCS for binary files.
+# Key requirements 
+
+1. `binvcs` is version control system for binary files.
 2. `binvcs` provides command line interface.
 3. List of supported functions:
     a. `binvcs init`                                      - create new repository.
@@ -18,16 +20,22 @@
     o. `binvcs recommit [--checkpoint] <commentary>`      - revert last commit and commit changes once again. It works only if there were no changes on filesystem.
     p. `binvcs remove-branch <branch-id>`                 - remove branch from repository (HEAD can't be removed).
     q. `binvcs rename-branch <old-id> <new-id`>           - change branch id from <old-id> to <new-id>.
-4. Repository contains branches.
-5. Branches have id (string) and contain commits.
-6. Commit is a record which contains id, creation date, commentary, author and list of stored files and directories.
-7. Checkpoints are commits with enabled rollback functionality.
-8. `binvcs` must keep user settings.
-9. Author name is specified in user settings.
-10. `binvcs` mustn't make deltas of any files. It must save binary file wholly at the checkpoint.
-11. Last commit on branch must always be a checkpoint.
-12. Keyword `HEAD` can be specified instead of <commit-id>. In this case `binvcs` substitutes id of the last commit on current branch.
-13. [Optional] Stored files must be compressed. Compression technique can be specified in user settings.
-14. Each checkpoint must be stored in separate folders (for default content storage).
-15. Every commit must have unique id in a repository (not just unique id in a branch).
-16. Every branch must have unique id in a repository.
+4. `binvcs` works with repositories.
+5. Repository is a container for different project's versions (mentioned below as branches).
+6. Branches have user defined id and contain commits.
+7. Commit is a record which contains id, creation date, commentary, author and list of stored files and directories.
+8. Checkpoints are commits with enabled rollback functionality. When commit is marked as checkpoint, it stores copies of user files.
+9. `binvcs` must store each binary file wholly at the checkpoint (not just deltas of files).
+10. Last commit on a branch must always be a checkpoint.
+11. Keyword `HEAD` can be specified instead of <commit-id>. In this case `binvcs` substitutes id of the last commit on current branch.
+12. `binvcs` must be able to store repository index on file system, RDBMS, etc.
+13. `binvcs` must be able to store files on local file system, FTP, mediafire.com, etc.
+
+# Optional features
+
+1. Stored files must be compressed. Compression technique can be specified in user settings.
+
+# Settings requirements
+
+1. `binvcs` must keep user settings.
+2. Author name is specified in user settings. It is used to mark commits.
