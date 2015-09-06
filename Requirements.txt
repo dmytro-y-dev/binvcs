@@ -14,7 +14,7 @@
     i. `binvcs unstage`                                   - clear stage.
     j. `binvcs help`                                      - show brief help on commands.
     k. `binvcs checkpoints`                               - display all available checkpoints.
-    l. `binvcs rollback <commit-id>`                      - rollback changes to the state of project at time of commit. Commit must have a checkpoint to enable rollback.
+    l. `binvcs extract <commit-id>`                       - extracts stored at the time of commit project files. Commit must have a checkpoint to enable extraction.
     m. `binvcs remove-checkpoint <commit-id>`             - make commit unrollable (if you need to free space from old checkpoints).
     n. `binvcs checkpoint <commentary>`                   - shortcut for `binvcs commit --checkpoint <commentary>`.
     o. `binvcs recommit [--checkpoint] <commentary>`      - revert last commit and commit changes once again. It works only if there were no changes on filesystem.
@@ -30,6 +30,7 @@
 11. Keyword `HEAD` can be specified instead of <commit-id>. In this case `binvcs` substitutes id of the last commit on current branch.
 12. `binvcs` must be able to store repository index on file system, RDBMS, etc.
 13. `binvcs` must be able to store files on local file system, FTP, mediafire.com, etc.
+14. If `HEAD` commit is not marked as checkpoint, then stored files from this commit will be removed on next `binvcs commit` (or `binvcs checkpoint`) action.
 
 # Optional features
 

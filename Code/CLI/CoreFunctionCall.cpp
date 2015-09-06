@@ -1,0 +1,8 @@
+///////////////////////////////////////////////////////////
+//  CoreFunctionCall.cpp
+//  Implementation of the Class CoreFunctionCall
+//  Created on:      06-сен-2015 18:45:58
+//  Original author: metamaker
+///////////////////////////////////////////////////////////
+
+#include "CoreFunctionCall.h"

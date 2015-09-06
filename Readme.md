@@ -25,7 +25,7 @@ should store files or not. It is designed so to keep size of file storage low.
 `binvcs unstage`                                   - clear stage.
 `binvcs help`                                      - show brief help on commands.
 `binvcs checkpoints`                               - display all available checkpoints.
-`binvcs rollback <commit-id>`                      - rollback changes to the state of project at time of commit. Commit must have a checkpoint to enable rollback.
+`binvcs extract <commit-id>`                       - extracts stored at the time of commit project files. Commit must have a checkpoint to enable extraction.
 `binvcs remove-checkpoint <commit-id>`             - make commit unrollable (if you need to free space from old checkpoints).
 `binvcs checkpoint <commentary>`                   - shortcut for `binvcs commit --checkpoint <commentary>`.
 `binvcs recommit [--checkpoint] <commentary>`      - revert last commit and commit changes once again. It works only if there were no changes on filesystem.
