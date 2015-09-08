@@ -1,8 +1,8 @@
 ///////////////////////////////////////////////////////////
 //  IRepositoryFactory.cpp
 //  Implementation of the Class IRepositoryFactory
-//  Created on:      06-сен-2015 18:46:40
-//  Original author: metamaker
+//  Created on:      08-сен-2015 13:29:45
+//  Original author: hooligan
 ///////////////////////////////////////////////////////////
 
 #include "IRepositoryFactory.h"
@@ -22,31 +22,13 @@ IRepositoryFactory::~IRepositoryFactory(){
 
 
 
-IBranchPtr IRepositoryFactory::CreateBranch(IRepositoryPtr repository, string branchId){
+IContentStoragePtr IRepositoryFactory::CreateContentStorage(){
 
 	return  NULL;
 }
 
 
-ICommitPtr IRepositoryFactory::CreateCommit(IRepositoryPtr repository){
-
-	return  NULL;
-}
-
-
-ICommitedFilePtr IRepositoryFactory::CreateCommitedFile(string path){
-
-	return  NULL;
-}
-
-
-IContentStoragePtr IRepositoryFactory::CreateContentStorage(IRepositoryPtr repository){
-
-	return  NULL;
-}
-
-
-IRepositoryPtr IRepositoryFactory::CreateRepository(string path){
+IRepositoryPtr IRepositoryFactory::CreateRepository(){
 
 	return  NULL;
 }

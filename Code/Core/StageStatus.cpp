@@ -1,7 +1,7 @@
 ///////////////////////////////////////////////////////////
 //  StageStatus.cpp
 //  Implementation of the Class StageStatus
-//  Created on:      06-сен-2015 18:46:41
+//  Created on:      08-сен-2015 13:29:46
 //  Original author: hooligan
 ///////////////////////////////////////////////////////////
 

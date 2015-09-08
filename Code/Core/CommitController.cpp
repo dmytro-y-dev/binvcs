@@ -1,7 +1,7 @@
 ///////////////////////////////////////////////////////////
 //  CommitController.cpp
 //  Implementation of the Class CommitController
-//  Created on:      06-сен-2015 18:46:38
+//  Created on:      08-сен-2015 13:29:43
 //  Original author: hooligan
 ///////////////////////////////////////////////////////////
 
@@ -22,7 +22,7 @@ CommitController::~CommitController(){
 
 
 
-CommitController::CommitController(RepositoryFactoryPtr repositoryFactory){
+CommitController::CommitController(IRepositoryFactoryPtr repositoryFactory){
 
 }
 

@@ -1,7 +1,7 @@
 ///////////////////////////////////////////////////////////
 //  ICommit.cpp
 //  Implementation of the Class ICommit
-//  Created on:      06-сен-2015 18:46:39
+//  Created on:      08-сен-2015 13:29:45
 //  Original author: metamaker
 ///////////////////////////////////////////////////////////
 

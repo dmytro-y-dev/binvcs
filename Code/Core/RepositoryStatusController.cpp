@@ -1,7 +1,7 @@
 ///////////////////////////////////////////////////////////
 //  RepositoryStatusController.cpp
 //  Implementation of the Class RepositoryStatusController
-//  Created on:      06-сен-2015 18:46:40
+//  Created on:      08-сен-2015 13:29:46
 //  Original author: hooligan
 ///////////////////////////////////////////////////////////
 
@@ -22,7 +22,7 @@ RepositoryStatusController::~RepositoryStatusController(){
 
 
 
-RepositoryStatusController::RepositoryStatusController(RepositoryFactoryPtr repositoryFactory){
+RepositoryStatusController::RepositoryStatusController(IRepositoryFactoryPtr repositoryFactory){
 
 }
 

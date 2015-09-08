@@ -1,7 +1,7 @@
 ///////////////////////////////////////////////////////////
 //  CoreControllersFactory.cpp
 //  Implementation of the Class CoreControllersFactory
-//  Created on:      06-сен-2015 18:46:38
+//  Created on:      08-сен-2015 13:29:44
 //  Original author: hooligan
 ///////////////////////////////////////////////////////////
 
@@ -20,6 +20,11 @@ CoreControllersFactory::~CoreControllersFactory(){
 
 
 
+
+
+CoreControllersFactory::CoreControllersFactory(IRepositoryFactoryPtr repositoryFactory){
+
+}
 
 
 BranchControllerPtr CoreControllersFactory::GetBranchController(){

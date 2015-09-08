@@ -27,7 +27,7 @@ namespace binvcs_core
 		CommitController();
 		virtual ~CommitController();
 
-		CommitController(RepositoryFactoryPtr repositoryFactory);
+		CommitController(IRepositoryFactoryPtr repositoryFactory);
 		void AttachListener(IControllerEventsListener listener);
 		void DetachListener();
 		void Extract(string commitId);

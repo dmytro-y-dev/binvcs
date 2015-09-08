@@ -29,7 +29,7 @@ namespace binvcs_core
 		RepositoryStatusController();
 		virtual ~RepositoryStatusController();
 
-		RepositoryStatusController(RepositoryFactoryPtr repositoryFactory);
+		RepositoryStatusController(IRepositoryFactoryPtr repositoryFactory);
 		CommitsDifference DiffCommits(string firstCommitId, string secondCommitId);
 		vector<string> GetBranchesName();
 		vector<string> GetCheckpointsName();

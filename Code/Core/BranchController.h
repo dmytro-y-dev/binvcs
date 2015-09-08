@@ -27,7 +27,7 @@ namespace binvcs_core
 		BranchController();
 		virtual ~BranchController();
 
-		BranchController(RepositoryFactoryPtr repositoryFactory);
+		BranchController(IRepositoryFactoryPtr repositoryFactory);
 		void RemoveBranch(string branchId);
 		void RenameBranch(string oldId, string newId);
 		void SwitchCurrentBranch(string branchId);

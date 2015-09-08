@@ -29,7 +29,7 @@ namespace binvcs_core
 		StageController();
 		virtual ~StageController();
 
-		StageController(RepositoryFactoryPtr repositoryFactory);
+		StageController(IRepositoryFactoryPtr repositoryFactory);
 		void AddFiles(vector<string> paths);
 		void AttachListener(IControllerEventsListener listener);
 		void Commit(bool isCheckpoint, string commentary);

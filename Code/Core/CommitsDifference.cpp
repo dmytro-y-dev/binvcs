@@ -1,7 +1,7 @@
 ///////////////////////////////////////////////////////////
 //  CommitsDifference.cpp
 //  Implementation of the Class CommitsDifference
-//  Created on:      06-сен-2015 18:46:38
+//  Created on:      08-сен-2015 13:29:43
 //  Original author: metamaker
 ///////////////////////////////////////////////////////////
 

@@ -27,6 +27,7 @@ namespace binvcs_core
 		CoreControllersFactory();
 		virtual ~CoreControllersFactory();
 
+		CoreControllersFactory(IRepositoryFactoryPtr repositoryFactory);
 		BranchControllerPtr GetBranchController();
 		CommitContollerPtr GetCommitController();
 		IContentStoragePtr GetContentStorage();

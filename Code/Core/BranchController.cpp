@@ -1,7 +1,7 @@
 ///////////////////////////////////////////////////////////
 //  BranchController.cpp
 //  Implementation of the Class BranchController
-//  Created on:      06-сен-2015 18:46:38
+//  Created on:      08-сен-2015 13:29:43
 //  Original author: hooligan
 ///////////////////////////////////////////////////////////
 
@@ -22,7 +22,7 @@ BranchController::~BranchController(){
 
 
 
-BranchController::BranchController(RepositoryFactoryPtr repositoryFactory){
+BranchController::BranchController(IRepositoryFactoryPtr repositoryFactory){
 
 }
 

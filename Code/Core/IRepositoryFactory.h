@@ -27,11 +27,8 @@ namespace binvcs_core
 		IRepositoryFactory();
 		virtual ~IRepositoryFactory();
 
-		IBranchPtr CreateBranch(IRepositoryPtr repository, string branchId);
-		ICommitPtr CreateCommit(IRepositoryPtr repository);
-		ICommitedFilePtr CreateCommitedFile(string path);
-		IContentStoragePtr CreateContentStorage(IRepositoryPtr repository);
-		IRepositoryPtr CreateRepository(string path);
+		IContentStoragePtr CreateContentStorage();
+		IRepositoryPtr CreateRepository();
 
 	};
 

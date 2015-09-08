@@ -15,29 +15,27 @@ PLACE UNIT DESCRIPTION HERE
  
 ********************************************************************************************/
 
-#ifndef METAMAKER_BINVCS_CORE_REPOSITORYFACTORY
-#define METAMAKER_BINVCS_CORE_REPOSITORYFACTORY
+#ifndef METAMAKER_BINVCS_CORE_CONFIGURABLEREPOSITORYFACTORY
+#define METAMAKER_BINVCS_CORE_CONFIGURABLEREPOSITORYFACTORY
 
 #include "IRepositoryFactory.h"
 
 namespace binvcs_core
 {
-	class RepositoryFactory : public IRepositoryFactory
+	class ConfigurableRepositoryFactory : public IRepositoryFactory
 	{
 
 	public:
-		virtual ~RepositoryFactory();
+		ConfigurableRepositoryFactory();
+		virtual ~ConfigurableRepositoryFactory();
 
-		RepositoryFactory();
-		IContentStorage CreateContentStorage(string respoitoryType);
-		IRepositoryPtr CreateRepository(string repositoryType);
-
-	private:
-		void RegisterContentStorageType(string storageType, ContentStorageFactoryMethodType factoryMethod);
-		void RegisterRepositoryType(string repositoryType, RepositoryFactoryMethodType factoryMethod);
+		IContentStoragePtr CreateContentStorage();
+		IRepositoryPtr CreateRepository();
+		void SetContentStorageConstructor(ContentStorageFactoryMethodType factoryMethod);
+		void SetRepositoryConstructor(RepositoryFactoryMethodType factoryMethod);
 
 	};
 
 }
 
-#endif //METAMAKER_BINVCS_CORE_REPOSITORYFACTORY
+#endif //METAMAKER_BINVCS_CORE_CONFIGURABLEREPOSITORYFACTORY
