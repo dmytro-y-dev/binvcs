@@ -11,29 +11,28 @@ metamaker's personal webpage: http://www.goblinov.net
 This file is provided under certain circumstances. For more details see LICENSE file in
 the project's root folder.
   
-PLACE UNIT DESCRIPTION HERE
+Class to convert command line arguments into tokens.
  
 ********************************************************************************************/
 
 #ifndef METAMAKER_BINVCS_CLI_ITOKENIZER
 #define METAMAKER_BINVCS_CLI_ITOKENIZER
 
+#include <string>
+#include <vector>
+
 namespace binvcs_cli
 {
-	/**
-	 * Class to convert command line arguments into tokens.
-	 */
 	class ITokenizer
 	{
+  typedef std::string string;
+  typedef std::vector<string> TokensList;
 
 	public:
-		ITokenizer();
-		virtual ~ITokenizer();
+    virtual ~ITokenizer() {}
 
-		vector<string> Tokenize(string text);
-
+    virtual TokensList Tokenize(const string& text) = 0;
 	};
-
 }
 
 #endif //METAMAKER_BINVCS_CLI_ITOKENIZER
