@@ -1,42 +1,22 @@
-///////////////////////////////////////////////////////////
-//  BranchController.cpp
-//  Implementation of the Class BranchController
-//  Created on:      08-сен-2015 13:29:43
-//  Original author: hooligan
-///////////////////////////////////////////////////////////
+#include <memory>
 
 #include "BranchController.h"
 
+using namespace binvcs_core;
 
-BranchController::BranchController(){
-
+BranchController::BranchController(IRepositoryFactoryPtr repositoryFactory) :
+  m_repositoryFactory(std::move(repositoryFactory))
+{
 }
 
-
-
-BranchController::~BranchController(){
-
+void BranchController::RemoveBranch(const string & branchId) const
+{
 }
 
-
-
-
-
-BranchController::BranchController(IRepositoryFactoryPtr repositoryFactory){
-
+void BranchController::RenameBranch(const string & oldId, const string & newId) const
+{
 }
 
-
-void BranchController::RemoveBranch(string branchId){
-
-}
-
-
-void BranchController::RenameBranch(string oldId, string newId){
-
-}
-
-
-void BranchController::SwitchCurrentBranch(string branchId){
-
+void BranchController::SwitchCurrentBranch(const string & branchId) const
+{
 }

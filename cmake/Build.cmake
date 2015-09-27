@@ -3,20 +3,21 @@
 #-----------------------------------------------
 
 include_directories(
-	source/CLI
-	source/Settings
-	source/Core
+	source
 )
 
-FILE(GLOB PROJECT_SOURCE_FILES
+FILE(
+	GLOB PROJECT_SOURCE_FILES
 
 	source/CLI/*.cpp
 	source/Settings/*.cpp
 	source/Core/*.cpp
+	source/*.cpp
 	
 	source/CLI/*.h
 	source/Settings/*.h
 	source/Core/*.h
+	source/*.h
 )
 
 add_executable(binvcs ${PROJECT_SOURCE_FILES})

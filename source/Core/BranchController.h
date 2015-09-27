@@ -18,22 +18,22 @@ PLACE UNIT DESCRIPTION HERE
 #ifndef METAMAKER_BINVCS_CORE_BRANCHCONTROLLER
 #define METAMAKER_BINVCS_CORE_BRANCHCONTROLLER
 
+#include <BuildConfig.h>
+
 namespace binvcs_core
 {
 	class BranchController
 	{
-
 	public:
-		BranchController();
-		virtual ~BranchController();
-
 		BranchController(IRepositoryFactoryPtr repositoryFactory);
-		void RemoveBranch(string branchId);
-		void RenameBranch(string oldId, string newId);
-		void SwitchCurrentBranch(string branchId);
 
+		void RemoveBranch(const string& branchId) const;
+		void RenameBranch(const string& oldId, const string& newId) const;
+		void SwitchCurrentBranch(const string& branchId) const;
+
+	private:
+		IRepositoryFactoryPtr m_repositoryFactory;
 	};
-
 }
 
 #endif //METAMAKER_BINVCS_CORE_BRANCHCONTROLLER
