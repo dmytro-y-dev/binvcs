@@ -1,55 +1,38 @@
-///////////////////////////////////////////////////////////
-//  TokenizerBadSymbolException.cpp
-//  Implementation of the Class TokenizerBadSymbolException
-//  Created on:      06-сен-2015 18:45:58
-//  Original author: metamaker
-///////////////////////////////////////////////////////////
+#include <sstream>
 
 #include "TokenizerBadSymbolException.h"
 
+using namespace binvcs_cli;
 
-TokenizerBadSymbolException::TokenizerBadSymbolException(){
-
+TokenizerBadSymbolException::TokenizerBadSymbolException(const string& text, size_t pos) :
+  m_commandLineText(text), m_badSymbolPosition(pos)
+{
 }
 
+TokenizerBadSymbolException::string TokenizerBadSymbolException::GetHint() const
+{
+  std::ostringstream hintStream;
+  hintStream << "Error at symbol " << m_badSymbolPosition + 1 << ": " << m_commandLineText;
 
-
-TokenizerBadSymbolException::~TokenizerBadSymbolException(){
-
+  return hintStream.str();
 }
 
-
-
-
-
-TokenizerBadSymbolException::TokenizerBadSymbolException(string text, size_t pos){
-
+size_t TokenizerBadSymbolException::GetBadSymbolPosition() const
+{
+  return m_badSymbolPosition;
 }
 
-
-size_t TokenizerBadSymbolException::GetBadSymbolPosition(){
-
-	return  NULL;
+TokenizerBadSymbolException::string TokenizerBadSymbolException::GetCommandLineText() const
+{
+  return m_commandLineText;
 }
 
-
-string TokenizerBadSymbolException::GetCommandLineText(){
-
-	return  NULL;
+void TokenizerBadSymbolException::SetBadSymbolPosition(size_t pos)
+{
+  m_badSymbolPosition = pos;
 }
 
-
-string TokenizerBadSymbolException::GetHint(){
-
-	return  NULL;
-}
-
-
-void TokenizerBadSymbolException::SetBadSymbolPosition(size_t pos){
-
-}
-
-
-void TokenizerBadSymbolException::SetCommandLineText(string text){
-
+void TokenizerBadSymbolException::SetCommandLineText(const string& text)
+{
+  m_commandLineText = text;
 }

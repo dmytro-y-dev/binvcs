@@ -5,10 +5,10 @@ cd ..
 cmake -H. -Bbuild -G "Visual Studio 14" -DCMAKE_INSTALL_PREFIX:PATH=../
 
 REM cd build
-REM msbuild cppbg.sln /p:Configuration=Debug
+REM msbuild binvcs.sln /p:Configuration=Debug
 REM msbuild INSTALL.vcxproj /p:Configuration=Debug
 
-REM msbuild cppbg.sln /p:Configuration=Release
+REM msbuild binvcs.sln /p:Configuration=Release
 REM msbuild INSTALL.vcxproj /p:Configuration=Release
 REM cd ..
 

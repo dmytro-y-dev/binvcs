@@ -27,9 +27,8 @@ namespace binvcs_core
 {
   class BranchController
   {
-  private:
-    typedef std::string string;
-    typedef std::unique_ptr<binvcs_core::IRepositoryFactory> IRepositoryFactoryPtr;
+  typedef std::string string;
+  typedef std::unique_ptr<binvcs_core::IRepositoryFactory> IRepositoryFactoryPtr;
 
   public:
     BranchController(IRepositoryFactoryPtr repositoryFactory);

@@ -1,5 +1,3 @@
-#include <memory>
-
 #include "BranchController.h"
 
 using namespace binvcs_core;
