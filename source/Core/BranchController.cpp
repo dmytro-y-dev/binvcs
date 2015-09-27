@@ -9,14 +9,14 @@ BranchController::BranchController(IRepositoryFactoryPtr repositoryFactory) :
 {
 }
 
-void BranchController::RemoveBranch(const string & branchId) const
+void BranchController::RemoveBranch(const string& branchId) const
 {
 }
 
-void BranchController::RenameBranch(const string & oldId, const string & newId) const
+void BranchController::RenameBranch(const string& oldId, const string& newId) const
 {
 }
 
-void BranchController::SwitchCurrentBranch(const string & branchId) const
+void BranchController::SwitchCurrentBranch(const string& branchId) const
 {
 }
